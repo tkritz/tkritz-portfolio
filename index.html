@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio: Ritsu Tanaka</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50 text-gray-900 scroll-smooth font-sans">
+
+
+<!-- IMAGE MODAL -->
+<div id="imgModal"
+     class="fixed inset-0 z-50 hidden overflow-auto overscroll-contain bg-black/80 pt-[60px]">
+
+  <span id="closeModal"
+        class="absolute top-[30px] right-[35px] text-white text-[40px] font-bold cursor-pointer">
+    &times;
+  </span>
+
+  <!-- This replaces #viewport -->
+  <div class="w-full">
+    <img id="fullImage"
+         class="block mx-auto max-w-[90%] rounded-lg transition-[opacity,filter] duration-300"
+         src=""
+         alt="">
+  </div>
+</div>
+
+
+<!-- NAV -->
+<nav class="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center text-[1.5rem] font-semibold font-sans">
+  <!-- Logo -->
+  <div class="w-28 h-28 hover:scale-105 transition-transform">
+    <img src="images/RT-logo.png" alt="Ritsu Tanaka Logo" class="w-full h-full object-contain">
+  </div>
+
+  <!-- Nav Links -->
+  <div class="flex items-center space-x-16">
+    <a href="#work" class="relative group">
+      Projects
+      <span class="absolute left-0 -bottom-1 w-full h-1.5 bg-[#34D399] transition-all group-hover:h-2"></span>
+    </a>
+    <a href="#media" class="relative group">
+      Media
+      <span class="absolute left-0 -bottom-1 w-full h-1.5 bg-[#34D399] transition-all group-hover:h-2"></span>
+    </a>
+
+    <!-- Contact Button styled like others -->
+    <a href="#contact" class="relative group">
+      Contact Me
+      <span class="absolute left-0 -bottom-1 w-full h-1.5 bg-[#34D399] transition-all group-hover:h-2"></span>
+    </a>
+  </div>
+</nav>
+
+
+
+<!-- HERO -->
+<!-- HERO -->
+<section class="max-w-6xl mx-auto px-6 pt-24 pb-40 grid md:grid-cols-2 gap-16 items-center">
+
+
+  <div>
+    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05]">
+      Hi, I’m <span class="text-[#34D399]">Ritsu</span>.
+    </h1>
+
+    <p class="mt-8 text-xl md:text-2xl max-w-xl font-medium text-gray-700">
+     I’m a computer science student driven by design, building websites and bringing visual ideas to life.
+
+    </p>
+  </div>
+
+  <div class="flex justify-center md:justify-end">
+    <div class="rounded-full ring-[26px] ring-[#34D399] ring-offset-gray-50">
+      <img
+        src="images/profile.png"
+        alt="Portrait"
+        class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover"
+      />
+    </div>
+  </div>
+
+</section>
+<!-- WORK / UI DESIGNS + WEBSITES -->
+<section id="work" class="bg-gray-900 text-gray-50 py-28">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- WEB UI DESIGN -->
+    <h2 class="text-4xl md:text-6xl font-extrabold mb-4">
+      Web UI Design
+    </h2>
+
+    <p class="text-gray-400 max-w-xl mb-16">
+      Selected website interface designs focused on clarity,
+      hierarchy, and responsive layout.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-14 mb-20">
+
+      <!-- ITEM -->
+      <div class="group cursor-pointer">
+        <img
+          src="thumbnails/car-tint-co-tbn.png"
+          data-full="designs/car-tint-co.png"
+          alt="Car Tint Company Website UI"
+          class="ui-thumb rounded-xl border border-gray-700 hover:scale-[1.015] transition cursor-pointer"
+        />
+        <div class="mt-4">
+          <h3 class="text-2xl font-extrabold">Car Tint Company</h3>
+          <p class="text-gray-400 font-medium">Website UI Design</p>
+        </div>
+      </div>
+
+      <!-- ITEM -->
+      <div class="group cursor-pointer">
+        <img
+          src="thumbnails/land-co-tbn.png"
+          data-full="designs/land-co.png"
+          alt="Land Company Website UI"
+          class="ui-thumb rounded-xl border border-gray-700 hover:scale-[1.015] transition cursor-pointer"
+        />
+        <div class="mt-4">
+          <h3 class="text-2xl font-extrabold">Land Company</h3>
+          <p class="text-gray-400 font-medium">Website UI Design</p>
+        </div>
+      </div>
+
+      <!-- ITEM -->
+      <div class="group cursor-pointer">
+        <img
+          src="thumbnails/breakroom-co-tbn.png"
+          data-full="designs/breakroom-co.png"
+          alt="Breakroom Website UI"
+          class="ui-thumb rounded-xl border border-gray-700 hover:scale-[1.015] transition cursor-pointer"
+        />
+        <div class="mt-4">
+          <h3 class="text-2xl font-extrabold">Breakroom Company</h3>
+          <p class="text-gray-400 font-medium">Website UI Design</p>
+        </div>
+      </div>
+
+      <!-- ITEM -->
+      <div class="group cursor-pointer">
+        <img
+          src="thumbnails/proxy-co-tbn.png"
+          data-full="designs/proxy-co.png"
+          alt="Proxy Website UI"
+          class="ui-thumb rounded-xl border border-gray-700 hover:scale-[1.015] transition cursor-pointer"
+        />
+        <div class="mt-4">
+          <h3 class="text-2xl font-extrabold">Proxy Company</h3>
+          <p class="text-gray-400 font-medium">Website UI Design</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FULL WEBSITES -->
+    <h2 class="text-4xl md:text-6xl font-extrabold mb-4">
+      Websites
+    </h2>
+
+    <p class="text-gray-400 max-w-xl mb-16">
+      Full website projects I’ve built, focusing on responsive design, usability, and performance.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-14">
+
+      <!-- WEBSITE ITEM -->
+      <div class="group cursor-pointer">
+        <a href="https://tkritz.github.io/guess-who/" target="_blank" class="block">
+          <img
+            src="sites/guess-who.png"
+            alt="Guess Who Game"
+            class="rounded-xl border border-gray-700 hover:scale-[1.015] transition cursor-pointer"
+          />
+          <div class="mt-4">
+            <h3 class="text-2xl font-extrabold">Guess Who Game</h3>
+            <p class="text-gray-400 font-medium">Interactive web-based Guess Who game</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- WEBSITE ITEM -->
+      <div class="group cursor-pointer">
+        <a href="https://example-website2.com" target="_blank" class="block">
+          <img
+            src="sites/ritsu-site.png"
+            alt="Example Website 2"
+            class="rounded-xl border border-gray-700 hover:scale-[1.015] transition cursor-pointer"
+          />
+          <div class="mt-4">
+            <h3 class="text-2xl font-extrabold">This Site!</h3>
+            <p class="text-gray-400 font-medium">Portfolio / Responsive Layout</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Add more website items in the same format -->
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- MEDIA / SOCIAL -->
+<section id="media" class="max-w-6xl mx-auto px-6 py-28">
+  <h2 class="text-4xl font-extrabold mb-10">Social Media & Editing</h2>
+
+  <div class="flex flex-col md:flex-row gap-20 items-start"> <!-- increased gap from 8 to 12 -->
+
+    <!-- TikTok Column (50%) -->
+    <div class="md:w-1/2 flex flex-col gap-3 px-4"> <!-- added px-4 for inner padding -->
+      <h3 class="text-2xl font-extrabold">TikTok</h3>
+      <p class="text-gray-400 font-medium">22k followers</p>
+      <a href="https://www.tiktok.com/@trashijordi" target="_blank" class="block mt-2">
+        <img
+          src="images/tiktok-account.png"
+          alt="TikTok Channel"
+          class="w-full h-auto rounded-xl hover:scale-[1.015] transition"
+        />
+      </a>
+    </div>
+
+    <!-- Video Column (50%) -->
+    <div class="md:w-1/2 flex flex-col gap-3 px-4"> <!-- added px-4 for inner padding -->
+      <h3 class="text-2xl font-extrabold">Example Video</h3>
+      <p class="text-gray-400 font-medium">Mock Video Idea</p>
+      <video controls class="rounded-xl w-3/4 md:w-2/3 h-auto mt-2">
+        <source src="videos/example-video.mov" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="max-w-6xl mx-auto px-6 py-28">
+  <h2 class="text-4xl font-extrabold mb-12 relative inline-block">
+    Contact Me!
+    <span class="absolute left-0 -bottom-1 w-full h-1.5 bg-[#34D399] transition-all"></span>
+  </h2>
+
+  <!-- EMAIL -->
+  <div class="mb-12">
+    <p class="text-lg font-semibold text-gray-700 mb-2">EMAIL</p>
+    <p class="text-2xl font-semibold">
+      <a href="mailto:tkrisuu@gmail.com" class="underline hover:text-[#34D399] transition-colors">
+        tkrisuu@gmail.com
+      </a>
+    </p>
+  </div>
+
+  <!-- LINE -->
+  <div class="flex flex-col items-start gap-4">
+    <p class="text-lg font-semibold text-gray-700">LINE</p>
+
+    <img
+      src="images/line.jpg"
+      alt="LINE QR Code"
+      class="w-40 h-40 rounded-lg border border-gray-300"
+    />
+
+    <p class="text-sm text-gray-500">
+      Scan to add on LINE
+    </p>
+  </div>
+</section>
+
+
+<!-- JS (IMPORTANT: at end of body) -->
+<script src="script.js"></script>
+</body>
+</html>
