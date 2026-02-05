@@ -14,32 +14,42 @@
 
 <!-- IMAGE MODAL -->
 <div id="imgModal"
-     class="fixed inset-0 z-50 hidden overflow-auto overscroll-contain bg-black/80 pt-[60px]">
+     class="fixed inset-0 z-50 hidden
+            overflow-auto overscroll-contain
+            bg-black/80
+            pt-[60px]
+            px-4 md:px-0">
 
   <span id="closeModal"
-        class="absolute top-[30px] right-[35px] text-white text-[40px] font-bold cursor-pointer">
+        class="absolute
+               top-[30px] right-[35px]
+               md:top-[30px] md:right-[35px]
+               text-white text-[40px]
+               font-bold cursor-pointer">
     &times;
   </span>
 
-  <!-- This replaces #viewport -->
   <div class="w-full">
     <img id="fullImage"
-         class="block mx-auto max-w-[90%] rounded-lg transition-[opacity,filter] duration-300"
-         src=""
-         alt="">
+         class="block mx-auto
+                max-w-[90%]
+                rounded-lg
+                transition-[opacity,filter] duration-300
+                md:max-w-[90%]
+                max-w-full md:max-h-none
+                max-h-[85vh] md:max-h-none">
   </div>
 </div>
 
 
+
 <!-- NAV -->
-<nav class="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center text-[1.5rem] font-semibold font-sans">
-  <!-- Logo -->
-  <div class="w-28 h-28 hover:scale-105 transition-transform">
+<nav class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row md:justify-between md:items-center gap-4 text-lg md:text-[1.5rem] font-semibold font-sans">
+  <div class="w-20 h-20 md:w-28 md:h-28 mx-auto md:mx-0 hover:scale-105 transition-transform">
     <img src="images/RT-logo.png" alt="Ritsu Tanaka Logo" class="w-full h-full object-contain">
   </div>
 
-  <!-- Nav Links -->
-  <div class="flex items-center space-x-16">
+  <div class="flex justify-center md:justify-end gap-6 md:gap-16">
     <a href="#work" class="relative group">
       Projects
       <span class="absolute left-0 -bottom-1 w-full h-1.5 bg-[#34D399] transition-all group-hover:h-2"></span>
@@ -48,14 +58,13 @@
       Media
       <span class="absolute left-0 -bottom-1 w-full h-1.5 bg-[#34D399] transition-all group-hover:h-2"></span>
     </a>
-
-    <!-- Contact Button styled like others -->
     <a href="#contact" class="relative group">
       Contact Me
       <span class="absolute left-0 -bottom-1 w-full h-1.5 bg-[#34D399] transition-all group-hover:h-2"></span>
     </a>
   </div>
 </nav>
+
 
 
 
@@ -251,7 +260,7 @@
 
 
 <!-- CONTACT -->
-<section id="contact" class="max-w-6xl mx-auto px-6 py-28">
+<section id="contact" class="max-w-6xl mx-auto px-6 pb-28">
   <h2 class="text-4xl font-extrabold mb-12 relative inline-block">
     Contact Me!
     <span class="absolute left-0 -bottom-1 w-full h-1.5 bg-[#34D399] transition-all"></span>
@@ -262,7 +271,7 @@
     <p class="text-lg font-semibold text-gray-700 mb-2">EMAIL</p>
     <p class="text-2xl font-semibold">
       <a href="mailto:tkrisuu@gmail.com" class="underline hover:text-[#34D399] transition-colors">
-        tkrisuu@gmail.com
+        tkritsuu@gmail.com
       </a>
     </p>
   </div>
@@ -282,6 +291,20 @@
     </p>
   </div>
 </section>
+
+<div id="mobileBlock"
+     class="fixed inset-0 z-[9999] hidden
+            bg-black text-white
+            flex items-center justify-center
+            text-center px-6">
+  <div>
+    <h2 class="text-xl font-semibold mb-3">Desktop Required</h2>
+    <p class="text-sm opacity-80">
+      This experience is optimized for PC.<br>
+      Please view on a desktop device.
+    </p>
+  </div>
+</div>
 
 
 <!-- JS (IMPORTANT: at end of body) -->

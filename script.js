@@ -2,8 +2,6 @@ const modal = document.getElementById("imgModal");
 const modalImg = document.getElementById("fullImage");
 const closeBtn = document.getElementById("closeModal");
 
-
-// Cache low-res placeholders
 const lowResMap = {};
 
 // Pre-generate low-res placeholders
@@ -31,16 +29,14 @@ document.querySelectorAll(".ui-thumb").forEach(img => {
 document.querySelectorAll(".ui-thumb").forEach(img => {
   img.addEventListener("click", () => {
     const fullSrc = img.dataset.full;
+
     modal.classList.remove("hidden");
     document.body.classList.add("modal-open");
 
-
-    // show low-res immediately
     modalImg.src = lowResMap[fullSrc] || fullSrc;
     modalImg.style.filter = "blur(4px)";
     modalImg.style.opacity = "0.95";
 
-    // load high-res
     const highRes = new Image();
     highRes.src = fullSrc;
     highRes.onload = () => {
@@ -51,34 +47,27 @@ document.querySelectorAll(".ui-thumb").forEach(img => {
   });
 });
 
-// Close modal
+// Close logic (SAFE)
+closeBtn.addEventListener("click", closeModal);
+modal.addEventListener("click", e => {
+  if (e.target === modal) closeModal();
+});
+
 function closeModal() {
   modal.classList.add("hidden");
   modalImg.src = "";
   modalImg.style.filter = "";
   modalImg.style.opacity = "";
   document.body.classList.remove("modal-open");
-
 }
 
-closeBtn.addEventListener("click", closeModal);
-modal.addEventListener("click", closeModal);
 
-
-
-
-@keyframes rainbow {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+// IF mobile display mobile screen
+function isMobile() {
+  return window.matchMedia("(max-width: 767px)").matches;
 }
 
-.profile-ring {
-  border-radius: 50%;
-  background: linear-gradient(270deg, #f87171, #fbbf24, #34d399, #3b82f6, #a78bfa);
-  background-size: 1000% 1000%;
-  animation: rainbow 10s linear infinite;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+if (isMobile()) {
+  document.getElementById("mobileBlock").classList.remove("hidden");
+  document.body.style.overflow = "hidden";
 }
