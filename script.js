@@ -3,6 +3,28 @@ const modalImg = document.getElementById("fullImage");
 const closeBtn = document.getElementById("closeModal");
 
 const lowResMap = {};
+const mobileBlock = document.getElementById("mobileBlock");
+
+function updateMobileBlock() {
+  if (window.matchMedia("(max-width: 767px)").matches) {
+    mobileBlock.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+    document.body.style.pointerEvents = "none";
+    mobileBlock.style.pointerEvents = "auto";
+  } else {
+    mobileBlock.classList.add("hidden");
+    document.body.style.overflow = "";
+    document.body.style.pointerEvents = "";
+  }
+}
+
+// Run on page load
+updateMobileBlock();
+
+// Recheck on resize
+window.addEventListener("resize", updateMobileBlock);
+
+
 
 // Pre-generate low-res placeholders
 document.querySelectorAll(".ui-thumb").forEach(img => {
@@ -59,15 +81,4 @@ function closeModal() {
   modalImg.style.filter = "";
   modalImg.style.opacity = "";
   document.body.classList.remove("modal-open");
-}
-
-
-// IF mobile display mobile screen
-function isMobile() {
-  return window.matchMedia("(max-width: 767px)").matches;
-}
-
-if (isMobile()) {
-  document.getElementById("mobileBlock").classList.remove("hidden");
-  document.body.style.overflow = "hidden";
 }
